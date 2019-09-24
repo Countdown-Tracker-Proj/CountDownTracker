@@ -10,7 +10,7 @@
         <!--Active-->
         <scene sceneID="Agg-IS-N16">
             <objects>
-                <viewController id="fHS-MK-url" sceneMemberID="viewController">
+                <viewController id="fHS-MK-url" customClass="ActiveViewController" customModule="CountDownProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30e-QS-GeY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,15 +19,15 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="C9U-SD-yYw">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="C9U-SD-yYw" customClass="ActiveTableViewCell" customModule="CountDownProj" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C9U-SD-yYw" id="ouV-ng-WZI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Of The Entire Event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuI-ee-E5e">
-                                                    <rect key="frame" x="40" y="11" width="239" height="21"/>
+                                                    <rect key="frame" x="40" y="11" width="239" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="239" id="rG0-0b-LVu"/>
                                                     </constraints>
@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41f-NV-oJg">
-                                                    <rect key="frame" x="352" y="11" width="44" height="21"/>
+                                                    <rect key="frame" x="352" y="11" width="44" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,6 +51,10 @@
                                                 <constraint firstItem="XuI-ee-E5e" firstAttribute="leading" secondItem="ouV-ng-WZI" secondAttribute="leadingMargin" constant="20" id="z8B-eD-itk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activeEventLabel" destination="XuI-ee-E5e" id="Qtf-vM-5rK"/>
+                                            <outlet property="activeTimerLabel" destination="41f-NV-oJg" id="UUZ-U4-QtD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -68,12 +72,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLL-5p-N4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397.10144927536237" y="549.77678571428567"/>
+            <point key="canvasLocation" x="-135" y="595"/>
         </scene>
         <!--Add-->
         <scene sceneID="f87-cD-twO">
             <objects>
-                <viewController id="jZu-f0-pZT" sceneMemberID="viewController">
+                <viewController id="jZu-f0-pZT" customClass="AddNewViewController" customModule="CountDownProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FkK-fJ-6yC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,21 +130,26 @@
                         <viewLayoutGuide key="safeArea" id="okd-gx-iI8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" id="wXF-lL-ugT"/>
+                    <connections>
+                        <outlet property="CountDownTimerLabel" destination="cP8-ip-nOz" id="9AH-Qp-XwW"/>
+                        <outlet property="eventDetailsTextView" destination="53h-Ie-tzm" id="9mX-WF-d35"/>
+                        <outlet property="newEventTextField" destination="7dl-Zw-7hu" id="y6T-8e-ddu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sij-Mx-1dc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="984"/>
+            <point key="canvasLocation" x="1023" y="950"/>
         </scene>
         <!--Completed-->
         <scene sceneID="tfV-SQ-Szr">
             <objects>
-                <tableViewController id="far-O7-nJF" sceneMemberID="viewController">
+                <tableViewController id="far-O7-nJF" customClass="Comple" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uTv-Vr-0qQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sDM-Gm-9tu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sDM-Gm-9tu" customClass="CompletedTableViewCell" customModule="CountDownProj" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sDM-Gm-9tu" id="kyc-MZ-cnM">
@@ -163,6 +172,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="completedDateLAbel" destination="3H5-ex-Ush" id="12V-0R-Xmd"/>
+                                    <outlet property="completedEventNameLabel" destination="y3u-Ac-IJ3" id="RVC-Ew-x4X"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -174,7 +187,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txw-ev-Zxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397" y="1469"/>
+            <point key="canvasLocation" x="-136" y="1374"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xv9-jZ-MQd">

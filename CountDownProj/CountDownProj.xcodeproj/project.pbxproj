@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E503D3C5233A79F2006FD26B /* CompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503D3C4233A79F2006FD26B /* CompletedTableViewCell.swift */; };
+		E503D3C7233A7A19006FD26B /* ActiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503D3C6233A7A19006FD26B /* ActiveTableViewCell.swift */; };
 		E5115D9F23393109007057E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115D9E23393109007057E3 /* AppDelegate.swift */; };
 		E5115DA123393109007057E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115DA023393109007057E3 /* SceneDelegate.swift */; };
 		E5115DA623393109007057E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5115DA423393109007057E3 /* Main.storyboard */; };
 		E5115DA82339310C007057E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5115DA72339310C007057E3 /* Assets.xcassets */; };
 		E5115DAB2339310C007057E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5115DA92339310C007057E3 /* LaunchScreen.storyboard */; };
+		E5115DB3233965C9007057E3 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115DB2233965C9007057E3 /* CompletedViewController.swift */; };
+		E5115DB5233967E7007057E3 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115DB4233967E7007057E3 /* ActiveViewController.swift */; };
+		E5115DB7233968E3007057E3 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115DB6233968E3007057E3 /* AddNewViewController.swift */; };
+		E5115DBA23396B8B007057E3 /* CountdownEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5115DB923396B8B007057E3 /* CountdownEventModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E503D3C4233A79F2006FD26B /* CompletedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTableViewCell.swift; sourceTree = "<group>"; };
+		E503D3C6233A7A19006FD26B /* ActiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTableViewCell.swift; sourceTree = "<group>"; };
 		E5115D9B23393109007057E3 /* CountDownProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDownProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5115D9E23393109007057E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5115DA023393109007057E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		E5115DA72339310C007057E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5115DAA2339310C007057E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5115DAC2339310C007057E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5115DB2233965C9007057E3 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		E5115DB4233967E7007057E3 /* ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
+		E5115DB6233968E3007057E3 /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		E5115DB923396B8B007057E3 /* CountdownEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownEventModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E503D3C3233A79AF006FD26B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E503D3C4233A79F2006FD26B /* CompletedTableViewCell.swift */,
+				E503D3C6233A7A19006FD26B /* ActiveTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E5115D9223393109007057E3 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +78,32 @@
 				E5115D9E23393109007057E3 /* AppDelegate.swift */,
 				E5115DA023393109007057E3 /* SceneDelegate.swift */,
 				E5115DA423393109007057E3 /* Main.storyboard */,
+				E5115DB8233968EB007057E3 /* View Controllers */,
+				E5115DBB23396C2C007057E3 /* Model */,
 				E5115DA72339310C007057E3 /* Assets.xcassets */,
+				E503D3C3233A79AF006FD26B /* Views */,
 				E5115DA92339310C007057E3 /* LaunchScreen.storyboard */,
 				E5115DAC2339310C007057E3 /* Info.plist */,
 			);
 			path = CountDownProj;
+			sourceTree = "<group>";
+		};
+		E5115DB8233968EB007057E3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5115DB4233967E7007057E3 /* ActiveViewController.swift */,
+				E5115DB6233968E3007057E3 /* AddNewViewController.swift */,
+				E5115DB2233965C9007057E3 /* CompletedViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E5115DBB23396C2C007057E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5115DB923396B8B007057E3 /* CountdownEventModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E503D3C5233A79F2006FD26B /* CompletedTableViewCell.swift in Sources */,
+				E5115DBA23396B8B007057E3 /* CountdownEventModel.swift in Sources */,
+				E5115DB7233968E3007057E3 /* AddNewViewController.swift in Sources */,
+				E503D3C7233A7A19006FD26B /* ActiveTableViewCell.swift in Sources */,
+				E5115DB5233967E7007057E3 /* ActiveViewController.swift in Sources */,
+				E5115DB3233965C9007057E3 /* CompletedViewController.swift in Sources */,
 				E5115D9F23393109007057E3 /* AppDelegate.swift in Sources */,
 				E5115DA123393109007057E3 /* SceneDelegate.swift in Sources */,
 			);
